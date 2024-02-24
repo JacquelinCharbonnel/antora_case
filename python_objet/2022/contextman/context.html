@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Context manager :: Antora Use Case</title>
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/extra.css">
+<link rel="stylesheet" href="../../../_/css/lastmodify.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Antora Use Case</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="python_objet" data-version="2022">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Python objet</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../poo/poo.html">Concepts de la POO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../objet/objet.html">Objet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/Torche/torche.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../objet/TicTacToe/tictactoe.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../operateurs/operateurs.html">Opérateurs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../operateurs/domino/domino.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../classe/classe.html">Classe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../heritage/heritage.html">Héritage</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Formes/formes.html">Problème 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../heritage/Biodiversite/biodiversite.html">Problème 2</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exception/exception.html">Exceptions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../exception/Poker/poker.html">Problème</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../misc/misc.html">Sous le capot</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Application</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../iter/iter.html">Itérable</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="context.html">Context manager</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../packaging/packaging.html">Packaging</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Python objet</span>
+    <span class="version">2022</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Génie logiciel</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../genie_logiciel/2022/index.html">2022</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Le serveur Apache</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../apache/2022/index.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../../apache/2021/index.html">2021</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Making Of</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../makingof/Fr/index.html">Fr</a>
+        </li>
+        <li class="version">
+          <a href="../../../makingof/En/index.html">En</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Master Data Science</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../master/main_public.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Programmation en C</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../C/2022/C/base.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../../C/2021/C/base.html">2021</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Python objet</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="../index.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../2021/index.html">2021</a>
+        </li>
+        <li class="version">
+          <a href="../../2020/index.html">2020</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../master/main_public.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Python objet</a></li>
+    <li>Application</li>
+    <li><a href="context.html">Context manager</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2022</button>
+  <div class="version-menu">
+    <a class="version is-current" href="context.html">2022</a>
+    <a class="version" href="../../2021/contextman/context.html">2021</a>
+    <a class="version" href="../../2020/contextman/context.html">2020</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/antora_case/python_objet/starts/cur/modules/contextman/pages/context.adoc">Edit this Page</a></div>
+</div>
+<div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Context manager</h1>
+<div class="sect1">
+<h2 id="_utiliser_un_context_manager"><a class="anchor" href="#_utiliser_un_context_manager"></a>1. Utiliser un context manager</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un <em>context manager</em> permet de grouper des instructions,
+et d&#8217;exécuter automatiquement du code au préalable et a posteriori.</p>
+</div>
+<div class="listingblock">
+<div class="title">exemple de context manager</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">with open('data', 'w') as mon_fichier: <i class="conum" data-value="1"></i><b>(1)</b>
+  for i in range(-10,10):
+      print(i, file=mon_fichier)
+<i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>ici, le fichier est ouvert</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>ici, le fichier est fermé</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="paragraph">
+<p>Globalement, l&#8217;intérêt du context manager est de doter le traitement à réaliser d&#8217;un préambule et d&#8217;une conclusion, comme :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>une ouverture / fermeture (fichiers, sockets, etc.)</p>
+</li>
+<li>
+<p>un verrouillage / déverrouillage (fichiers, transactions, code, etc.)</p>
+</li>
+<li>
+<p>une allocation / libération (mémoire, session, etc.)</p>
+</li>
+<li>
+<p>une connexion / déconnexion (réseau, etc.)</p>
+</li>
+<li>
+<p>un démarrage / arrêt (service, etc.)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>et d&#8217;assurer que la conclusion sera réalisée, quels que soient les évènements qui peuvent advenir.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ecrire_un_context_manager"><a class="anchor" href="#_ecrire_un_context_manager"></a>2. Ecrire un context manager</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title"><a href="" title="balise3">Exercice xx1 (suite)</a></div>
+<div class="paragraph">
+<div class="title">Question xx1.1</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exit"><a class="anchor" href="#_exit"></a>2.1. <code>__exit__()</code></h3>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title"><a href="" title="balise3">Exercice xx1 (suite)</a></div>
+<div class="paragraph">
+<div class="title">Question xx1.2</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title"><a href="" title="balise3">Exercice xx1 (suite)</a></div>
+<div class="paragraph">
+<div class="title">Question xx1.3</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">Jacquelin Charbonnel
+  &nbsp; &mdash; &nbsp; Antora Use Case
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

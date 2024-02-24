@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Configuration du serveur Apache :: Antora Use Case</title>
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/extra.css">
+<link rel="stylesheet" href="../../../_/css/lastmodify.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Antora Use Case</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="apache" data-version="2021">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Le serveur Apache</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../start/start.html">Démarrage &amp; arrêt</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../http/http.html">Protocole HTTP</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="config.html">Configuration d&#8217;Apache</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Le serveur Apache</span>
+    <span class="version">2021</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Génie logiciel</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../genie_logiciel/2022/index.html">2022</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Le serveur Apache</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../2022/index.html">2022</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2021</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Making Of</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../makingof/Fr/index.html">Fr</a>
+        </li>
+        <li class="version">
+          <a href="../../../makingof/En/index.html">En</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Master Data Science</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../master/main_public.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Programmation en C</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../C/2022/C/base.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../../C/2021/C/base.html">2021</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Python objet</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../python_objet/2022/index.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../../python_objet/2021/index.html">2021</a>
+        </li>
+        <li class="version">
+          <a href="../../../python_objet/2020/index.html">2020</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../master/main_public.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Le serveur Apache</a></li>
+    <li><a href="config.html">Configuration d&#8217;Apache</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2021</button>
+  <div class="version-menu">
+    <a class="version" href="../../2022/config/config.html">2022</a>
+    <a class="version is-current" href="config.html">2021</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/antora_case/apache/starts/last/modules/config/pages/config.adoc">Edit this Page</a></div>
+</div>
+<div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Configuration du serveur Apache</h1>
+<div class="sect1">
+<h2 id="_repérage_des_fichiers_de_conf"><a class="anchor" href="#_repérage_des_fichiers_de_conf"></a>1. Repérage des fichiers de conf</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le but ici est de repérer les fichiers et répertoires constituant le serveur HTTP installé sur votre machine.</p>
+</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 1</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Dans le cas d&#8217;une installation par package, les noms et emplacements des fichiers sont fixés par la distribution.</p>
+</div>
+<div class="paragraph">
+<p>Dans le cas d&#8217;une installation à partir des sources, ils sont fixés par des options de compilation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fichier_de_configuration_principal"><a class="anchor" href="#_fichier_de_configuration_principal"></a>2. Fichier de configuration principal</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sect2">
+<h3 id="_associer_un_fichier_de_configuration_à_une_instance_de_serveur"><a class="anchor" href="#_associer_un_fichier_de_configuration_à_une_instance_de_serveur"></a>2.1. Associer un fichier de configuration à une instance de serveur</h3>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 2</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_syntaxe_des_lignes_du_fichier_de_configuration"><a class="anchor" href="#_syntaxe_des_lignes_du_fichier_de_configuration"></a>2.2. Syntaxe des lignes du fichier de configuration</h3>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 3</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_directives_serverroot_documentroot_user_et_group"><a class="anchor" href="#_directives_serverroot_documentroot_user_et_group"></a>3. Directives ServerRoot, DocumentRoot, User et Group</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 4</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><code>User</code> et <code>Group</code> spécifient l&#8217;identité sous laquelle s&#8217;exécute le serveur.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 5</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mise_en_ligne_de_quelques_pages_html"><a class="anchor" href="#_mise_en_ligne_de_quelques_pages_html"></a>4. Mise en ligne de quelques pages HTML</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="paragraph">
+<p><code>DirectoryIndex</code> spécifie le nom du fichier à utiliser lorsque l&#8217;URL conduit à un répertoire.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 6</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_documentation_en_ligne"><a class="anchor" href="#_documentation_en_ligne"></a>5. Documentation en ligne</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 7</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_personnaliser_les_messages_derreur"><a class="anchor" href="#_personnaliser_les_messages_derreur"></a>6. Personnaliser les messages d&#8217;erreur</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Pour modifier le paramétrage du serveur, il suffit d&#8217;apporter les modifications souhaitées dans les fichiers de configuration, puis de relancer le <em>daemon</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 8</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_logs"><a class="anchor" href="#_logs"></a>7. Logs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 9</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_redirection_durl"><a class="anchor" href="#_redirection_durl"></a>8. Redirection d&#8217;URL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 10</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configurer_les_propriétés_dune_arborescence_de_répertoires"><a class="anchor" href="#_configurer_les_propriétés_dune_arborescence_de_répertoires"></a>9. Configurer les propriétés d&#8217;une arborescence de répertoires</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">&lt;Directory <em>mon_repertoire</em>&gt;
+  <em>directive_1</em>
+  <em>directive_2</em>
+  …
+&lt;/Directory&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sect2">
+<h3 id="_options_de_répertoire"><a class="anchor" href="#_options_de_répertoire"></a>9.1. Options de répertoire</h3>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Exemples d&#8217;options de répertoire</dt>
+<dd>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</dd>
+</dl>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 11</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;option <code>FollowSymLinks</code> signifie que l&#8217;on autorise le serveur à suivre les liens symboliques.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 12</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alias"><a class="anchor" href="#_alias"></a>10. Alias</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 13</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contrôle_de_ladresse_du_client"><a class="anchor" href="#_contrôle_de_ladresse_du_client"></a>11. Contrôle de l&#8217;adresse du client</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="paragraph">
+<p>On peut affecter plusieurs directives <code>require</code> à un même répertoire.
+Pour en déterminer l&#8217;effet, il est nécessaire de les regrouper dans une section <code>&lt;RequireAll&gt;</code> (et), <code>&lt;RequireAny&gt;</code> (ou) ou <code>&lt;RequireNone&gt;</code> (aucune).</p>
+</div>
+<div class="paragraph">
+<p>Par exemple :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;RequireAny&gt;
+  Require host univ-angers.fr
+  Require host univ-nantes.fr
+&lt;/RequireAny&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>donne l&#8217;accès aux 2 domaines <code>univ-angers.fr</code> ou <code>univ-nantes.fr</code>.
+Autre exemple :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;RequireAll&gt;
+    Require all granted
+    Require not ip 10.252.46.165
+&lt;/RequireAll&gt;</pre>
+</div>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 14</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contrôle_daccès_par_authentification"><a class="anchor" href="#_contrôle_daccès_par_authentification"></a>12. Contrôle d&#8217;accès par authentification</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_gestion_des_comptes"><a class="anchor" href="#_gestion_des_comptes"></a>12.1. Gestion des comptes</h3>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 15</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_contrôle_daccès_par_login"><a class="anchor" href="#_contrôle_daccès_par_login"></a>12.2. Contrôle d&#8217;accès par login</h3>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 16</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fichier_htaccess"><a class="anchor" href="#_fichier_htaccess"></a>13. Fichier .htaccess</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="paragraph">
+<p>Pour activer cette fonctionnalité, il faut utiliser la directive <code>AllowOverride</code>.
+<code>AllowOverride</code> fixe ce qu&#8217;il est possible de déléguer via un fichier <code>.htaccess</code>.
+Par exemple :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;Directory /var/www/html&gt;
+  AllowOverride all
+&lt;/Directory&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>signifie que, dans l&#8217;arborescence <code>/var/www/html</code>, toutes les directives de contexte <code>htaccess</code> seront prises en compte dans un fichier <code>.htaccess</code>.</p>
+</div>
+<div class="paragraph">
+<p>A l&#8217;opposé :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;Directory /var/www/html&gt;
+  AllowOverride none
+&lt;/Directory&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>signifie que, dans l&#8217;arborescence <code>/var/www/html</code>, les <code>htaccess</code> ne seront pas pris en compte.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 17</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_virtual_host"><a class="anchor" href="#_virtual_host"></a>14. Virtual Host</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="paragraph">
+<p>Pour définir un virtual host, il suffit d&#8217;insérer dans la configuration une section :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;VirtualHost *:port&gt;
+  ServerName nom_du_virtual_host
+…
+ &lt;/VirtualHost&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Les directives de cette section redéfinissent le comportement de ce virtual host par rapport à la configuration globale.
+Seules des directives prévues à cet effet (contexte <code>virtual host</code>) sont permises.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 18</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Indication : modifier le fichier <code>/etc/hosts</code> de façon à pouvoir tester la fonctionnalité.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réécriture_durl"><a class="anchor" href="#_réécriture_durl"></a>15. Réécriture d&#8217;URL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le module <code>mod_rewrite</code> d&#8217;Apache permet de réécrire les URL de façon sophistiquée.
+L&#8217;URL requise par le client peut ainsi être complétement transformée à coup d&#8217;expressions régulières et renvoyée vers n&#8217;importe qu&#8217;elle autre URL, locale ou non.</p>
+</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 19</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pages_personnelles"><a class="anchor" href="#_pages_personnelles"></a>16. Pages personnelles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La directive <code>UserDir</code> définit l&#8217;emplacement pour les pages personnelles des utilisateurs de la machine.
+L&#8217;URL pour accéder à ces pages est alors de la forme :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>http://server.mon.domaine/~login/ma_page</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 20</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cms"><a class="anchor" href="#_cms"></a>17. CMS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;objectif ici est d&#8217;installer un CMS et de réaliser un petit site.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 21</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_https"><a class="anchor" href="#_https"></a>18. HTTPS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>HTTPS ajoute de la sécurité à HTTP, en permettant d&#8217;assurer :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>la confidentialité des échanges (impossible d&#8217;écouter les communications)</p>
+</li>
+<li>
+<p>l&#8217;intégrité des échanges (impossible de les falsifier)</p>
+</li>
+<li>
+<p>l&#8217;authentification du serveur</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1 et 2 sont réalisés par le chiffrement de la communication.
+3 est réalisé à l&#8217;aide d&#8217;un certificat : le serveur envoie au client son certificat en principe validées par une autorité de certification.</p>
+</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 22</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Mettre en oeuvre un serveur HTTPS nécessite de disposer d&#8217;un certificat pour le serveur.
+On peut s&#8217;affranchir d&#8217;une autorité de certification en auto-signant son propre certificat.
+Dans ce cas, les clients n&#8217;ont aucune garantie sur l&#8217;authenticité du serveur, mais cela permet néanmoins de chiffrer les communications.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 23</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">Jacquelin Charbonnel
+  &nbsp; &mdash; &nbsp; Antora Use Case
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Eléments constitutifs :: Antora Use Case</title>
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/extra.css">
+<link rel="stylesheet" href="../../_/css/lastmodify.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Antora Use Case</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="makingof" data-version="Fr">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Making Of</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="contexte.html">Le contexte</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="composant.html">Eléments constitutifs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation.html">Navigation</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Making Of</span>
+    <span class="version">Fr</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Génie logiciel</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../genie_logiciel/2022/index.html">2022</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Le serveur Apache</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../apache/2022/index.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../apache/2021/index.html">2021</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Making Of</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="index.html">Fr</a>
+        </li>
+        <li class="version">
+          <a href="../En/index.html">En</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Master Data Science</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../master/main_public.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Programmation en C</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../C/2022/C/base.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../C/2021/C/base.html">2021</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Python objet</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../python_objet/2022/index.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../python_objet/2021/index.html">2021</a>
+        </li>
+        <li class="version">
+          <a href="../../python_objet/2020/index.html">2020</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../master/main_public.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Making Of</a></li>
+    <li><a href="composant.html">Eléments constitutifs</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">Fr</button>
+  <div class="version-menu">
+    <a class="version is-current" href="composant.html">Fr</a>
+    <a class="version" href="../En/composant.html">En</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/antora_case/makingof/modules/ROOT/pages/composant.adoc">Edit this Page</a></div>
+</div>
+<div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Eléments constitutifs</h1>
+<div class="sect1">
+<h2 id="_un_site"><a class="anchor" href="#_un_site"></a>Un site</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un site Antora c&#8217;est :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>des meta-données décrivant le site (un playbook YAML),</p>
+</li>
+<li>
+<p>un ensemble de <em>components</em>, qui constituent le fond documentaire du site,</p>
+</li>
+<li>
+<p>un look (UI), implémentant le rendu.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Antora sépare strictement le contenu du rendu.</p>
+</div>
+<div class="paragraph">
+<p>Il existe un catalogue d&#8217;UI pour Antora.
+Tous les components d&#8217;un site
+prennent le look défini par l&#8217;UI associée à ce site.
+Un composant intégré dans différents sites prendra donc pour chacun d&#8217;eux le look de son site
+(autrement dit, il n&#8217;y a aucune notion de rendu dans un component).</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Dans cette démo, le site est l&#8217;ensemble des supports de cours dispensés par l&#8217;auteur à une promotion donnée (promotion=filière+année).
+Si l&#8217;auteur intervient dans plusieurs promos
+(par exemple en <em>licence informatique</em>, <em>licence pro développement web</em> et <em>master datascience</em>),
+alors chacune d&#8217;elles aura son site propre.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;UI utilisé est l&#8217;<a href="https://docs.antora.org/antora-ui-default">Antora Default UI</a>.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Il n&#8217;y a pas de système de navigation géré au niveau d&#8217;un site.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>La page d&#8217;accueil de ce site de démo est un aiguillage vers les components de ce site.
+Cette page AsciiDoctor a été faite à la main, comme une simple liste de liens :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">= Master Data Science
+
+Index des supports de cours (factices) du master Data Science::
+
+* xref:C:ROOT:index.adoc[Programmation C]
+* xref:apache:ROOT:index.adoc[Apache]
+* xref:genie_logiciel::index.adoc[]
+* xref:python_objet:ROOT:index.adoc[]
+
+Le making of::
+
+* xref:makingof:ROOT:index.adoc[Supports de cours avec Antora]
+* xref:En@makingof:ROOT:index.adoc[Course materials with Antora]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_component"><a class="anchor" href="#_component"></a>Component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un component est un sujet traité (ici, un support de cours).
+Concrètement, c&#8217;est un repository git contenant des documents interconnectés et autosuffisants.
+Il est défini par un playbook nommé <code>antora.yml</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Bien que les components d&#8217;un site soient indépendants les uns des autres,
+des liens de l&#8217;un peuvent néanmoins renvoyer vers des pages d&#8217;un autre.
+</td>
+</tr>
+</table>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. genie_logiciel/antora.yml</div>
+<div class="content">
+<div class="paragraph">
+<p>Le playbook <code>antora.yml</code> du component genie_logiciel est :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">name: genie_logiciel
+title: Génie logiciel
+version: 2022
+start_page: ROOT:index.adoc
+nav:
+- nav.adoc</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Un component est auto-suffisant.
+En tant que repository git, il possède son propre historique, ses versions successives, etc.</p>
+</div>
+<div class="paragraph">
+<p>Pour l&#8217;étudiant, un component est identifiable dans l&#8217;URL,
+dont la forme est <code>"site/component/version/&#8230;&#8203;"</code>.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+Les components de ce site de démo sont <em>master</em>, <em>C</em>, <em>apache</em>, <em>genie_logiciel</em>, <em>python_objet</em> et <em>making_of</em>,
+labellisés respectivement comme <em>Master Data Science</em>, <em>Programmation en C</em>, <em>Serveur Apache</em>, <em>Génie logiciel</em> et <em>Python Objet</em> et <em>Making Of</em>..
+</div>
+</div>
+<div class="paragraph">
+<p>Un component possède sa propre navigation.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Dans le site de démo, la navigation du component genie_logiciel est
+un fichier <code>nav.adoc</code> contenant une liste à plusieurs niveaux :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">* xref::intro.adoc[]
+* xref::processus.adoc[Processus de développement]
+* xref::fortran.adoc[]
+* xref::python.adoc[]
+
+* Problème
+** xref:probleme:sujet.adoc[Sujet]
+** xref:probleme:solution.adoc[Solution]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Un site peut assembler plusieurs versions d&#8217;un même component.
+En jouant astucieusement avec git,
+on peut coupler des différentes version d&#8217;un component au branche du repository correspondant.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+Dans le site, on remarque différentes versions relatives à l&#8217;année (<em>2020</em>, <em>2021</em>, <em>2022</em>, ainsi que <em>en cours</em> et -).
+Ces versions correspondent effectivement à des branches git.
+Mais on verra plus loin que ce ne sont pas seules versions existantes.
+</div>
+</div>
+<div class="paragraph">
+<p>Un component est structuré en modules.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_module"><a class="anchor" href="#_module"></a>Module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un module est un ensemble de fichiers logiquement liés entre eux.
+On y trouve des fichiers sources <code>*.adoc</code> (répertoire <code>pages</code>),
+les images incluses dans ces pages (répertoire <code>images</code>),
+des fichiers destinés à être téléchargés depuis ces pages,
+comme des documents PDF, des exemples de codes sources, etc. (répertoire <code>assets/attachments</code> et <code>examples</code>),
+ainsi que des portions de pages sources (répertoire <code>partials</code>).
+Physiquement, un module est une sous-arborescence de répertoires du component.
+Contrairement à un component qui possède une existance indépendante du site qui le publie,
+un module n&#8217;a pas pas d&#8217;existence propre en dehors du component auquel il contribue.
+C&#8217;est juste un moyen d&#8217;organiser le component.</p>
+</div>
+<div class="paragraph">
+<p>Pour l&#8217;étudiant, un component est identifiable dans l&#8217;URL,
+dont la forme est <code>"site/component/version/module/&#8230;&#8203;"</code>.</p>
+</div>
+<div class="paragraph">
+<p>On peut définir une navigation au niveau d&#8217;un module.
+Donc différentes stratégie sont possibles :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>gérer la navigation d&#8217;un component en un fichier unique,</p>
+</li>
+<li>
+<p>gérer la navigation au niveau de chaque module, et aggréger (avec des <em>include</em>) ces fichiers de navigation au niveau du component,</p>
+</li>
+<li>
+<p>mixer les 2.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">Jacquelin Charbonnel
+  &nbsp; &mdash; &nbsp; Antora Use Case
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

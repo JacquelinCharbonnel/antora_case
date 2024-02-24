@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Application à Python :: Antora Use Case</title>
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/extra.css">
+<link rel="stylesheet" href="../../_/css/lastmodify.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Antora Use Case</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="genie_logiciel" data-version="2022">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Génie logiciel</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Généralités</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="processus.html">Processus de développement</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="fortran.html">Application à Fortran</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="python.html">Application à Python</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Problème</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="probleme/sujet.html">Sujet</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="probleme/solution.html">Solution</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Génie logiciel</span>
+    <span class="version">2022</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Génie logiciel</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="index.html">2022</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Le serveur Apache</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../apache/2022/index.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../apache/2021/index.html">2021</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Making Of</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../makingof/Fr/index.html">Fr</a>
+        </li>
+        <li class="version">
+          <a href="../../makingof/En/index.html">En</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Master Data Science</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../master/main_public.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Programmation en C</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../C/2022/C/base.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../C/2021/C/base.html">2021</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Python objet</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../python_objet/2022/index.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../python_objet/2021/index.html">2021</a>
+        </li>
+        <li class="version">
+          <a href="../../python_objet/2020/index.html">2020</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../master/main_public.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Génie logiciel</a></li>
+    <li><a href="python.html">Application à Python</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/antora_case/genie_logiciel/modules/ROOT/pages/python.adoc">Edit this Page</a></div>
+</div>
+<div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Application à Python</h1>
+<div class="sect1">
+<h2 id="_programme_python"><a class="anchor" href="#_programme_python"></a>1. Programme Python</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Réaliser un programme Python, c&#8217;est créer un ensemble de fichiers sources
+contenant du code Python.</p>
+</div>
+<div class="paragraph">
+<p>Python étant un langage interprété, lorsque le développeur livre un programme à un utilisateur,
+il lui fournit :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>l&#8217;ensemble des fichiers sources du  programme,</p>
+</li>
+<li>
+<p>des fichiers de configuration destinés à paramétrer l&#8217;application,</p>
+</li>
+<li>
+<p>des fichiers de données destinées à être traitées par l&#8217;application,</p>
+</li>
+<li>
+<p>un mode d&#8217;emploi.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Lorsque l&#8217;utilisateur exploite le programme, il exécute le code fourni <strong>tel quel</strong>.
+Il n&#8217;a pas à intervenir sur le code, le modifier, pas même modifier des constantes dans le code.</p>
+</div>
+<div class="paragraph">
+<p>Le développeur peut utiliser un environnement de développement (EDI)
+pour mettre au point son programme (Spyder,PyDev, Idle, etc.).
+Il exécute son programme dans cet EDI.
+Mais l&#8217;utilisateur ne dispose pas forcément de cet EDI :
+il doit pouvoir exécuter l&#8217;application nativement sur son système.</p>
+</div>
+<div class="paragraph">
+<p>Si l&#8217;application doit être personnalisable, alors elle doit gérer cet aspect.
+C&#8217;est une tâche à part entière, que l&#8217;application doit prendre en charge.
+Cela se fait généralement par des fichiers de configuration documentés et destinés
+à être adapté par l&#8217;utilisateur.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_les_fichiers_composant_lapplication"><a class="anchor" href="#_les_fichiers_composant_lapplication"></a>2. Les fichiers composant l&#8217;application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une application python se compose des fichiers source,
+de fichiers de configuration et de données,
+de fichiers de documentation.</p>
+</div>
+<div class="sect2">
+<h3 id="_fichiers_source"><a class="anchor" href="#_fichiers_source"></a>2.1. Fichiers source</h3>
+<div class="paragraph">
+<p>Un code modulaire se maintient plus facilement qu&#8217;un code monolithique.
+Modulaire signifie qu&#8217;il est structuré en sous-programmes (fonctions, classes, etc.),
+et qu&#8217;il se présente sous forme de plusieurs fichiers sources,
+typiquement un programme principal et des modules.</p>
+</div>
+<div class="paragraph">
+<p>Une application doit être maintenable (par son créateur, mais aussi par d&#8217;autres développeurs),
+et pour cela, le code doit être judicieusement commenté.
+Les doc-strings python sont faites pour cela.
+Ce sont des commentaires multi-lignes placées juste en dessous des en-têtes de fonction ou de classe,
+ou bien en tête de fichier :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier monprog.py</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">#!/bin/env python3
+
+""" Ceci est mon programme
+    qui réalise blablabla """
+
+def mafonction(a,b):
+  """ Ceci est la ma fonction qui attend
+      2 arguments représentant blablabla
+      et renvoyant blablabla """
+  ...
+
+if __name__=="__main__":
+  """ Programme principal
+        Les traitements assurés sont blablabla.
+        Le code de retour correspond à blablabla """
+    ...
+    help(mafonction)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui donne à l&#8217;exécution :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Help on function mafonction in module __main__:
+
+mafonction(a, b)
+    Ceci est la ma fonction qui attend
+    2 arguments représentant blablabla
+    et renvoyant blablabla</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fichier_de_configuration"><a class="anchor" href="#_fichier_de_configuration"></a>2.2. Fichier de configuration</h3>
+<div class="paragraph">
+<p>Dans le cas le plus simple, c&#8217;est un fichier définissant des constantes, par exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>hauteur 1
+fichier_de_données "data.csv"
+seuil 12.3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le format est à choisir, il n&#8217;est pas lié au langage de programmation utilisé.
+On peut décider d&#8217;autoriser des commentaires, des lignes vides, d&#8217;utiliser le signe <code>=</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// longueur et largeur inférieures à 100
+longueur=80
+largeur=50
+
+// la hauteur doit être inférieure à largeur
+hauteur=10</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ce qui peut augmenter la lisibilité du fichier.
+Mais cela peut-être insuffisant pour exprimer une configuration complexe.
+Le format <code>.ini</code> est autre format répandu, plus riche :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini"> [global]
+ constante1=1
+ constante2="abcd"
+
+ [local]
+ constante1=2
+ constante2="efg"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le format <em>apacheconf</em> en est encore un autre :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;section global&gt;
+constante1=1
+constante2="abcd"
+&lt;/section&gt;
+
+&lt;section local&gt;
+ constante1=2
+ constante2="efg"
+  &lt;section interne&gt;
+  constante1=3
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fichier_de_données"><a class="anchor" href="#_fichier_de_données"></a>2.3. Fichier de données</h3>
+<div class="paragraph">
+<p>Si l&#8217;application souhaite travailler sur des données fournies par l&#8217;utilisateur,
+elle doit le prévoir et le gérer.
+Elle peut :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>les lui demander interactivement (les données seront donc saisies au clavier),</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> $ ./tri
+ entrer des entiers :
+ 1 5 2 4 3
+ les entiers triés sont 1 2 3 4 5</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>les récupérer au lancement de l&#8217;application, au travers d&#8217;arguments spécifiés sur la ligne de commande,</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> $ ./tri 1 5 2 4 3
+ les entiers triés sont 1 2 3 4 5</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>les lire dans un fichier de données externe au code, ou depuis un stockage réseau.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_documentation"><a class="anchor" href="#_documentation"></a>2.4. Documentation</h3>
+<div class="paragraph">
+<p>Une partie de la documentation s&#8217;adresse à l&#8217;utilisateur (le guide d&#8217;utilisation),
+l&#8217;autre est le manuel technique à destination de l&#8217;équipe de développement et de la maintenance.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_espace_de_nommage_namespace"><a class="anchor" href="#_espace_de_nommage_namespace"></a>3. Espace de nommage (<em>namespace</em>)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un <em>namespace</em> est un conteneur d&#8217;identifiants (nom de variable, de fonction, de type, etc.).
+Dans un namespace, chaque identifiant est unique :
+impossible d&#8217;avoir à la fois une fonction <code>f</code> et une variable <code>f</code>.
+Par contre, on peut avoir une fonction <code>f</code> dans un namespace A et une variable <code>f</code> dans un namespace B.</p>
+</div>
+<div class="paragraph">
+<p>Les identifiants globaux d’un programme sont dans le namespace global.
+Les identifiants locaux à une fonction sont dans le namespace de la fonction.
+Il est donc possible d&#8217;avoir une variable globale <code>x</code> et une variable locale <code>x</code>.</p>
+</div>
+<div class="paragraph">
+<p>Un namespace est une notion statique, que l&#8217;on identifie par une simple lecture du code.
+Par exemple, étant donnée le programme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">...
+def f():
+  ...
+  def g():
+    ...
+  ...
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>on identifie les namespaces suivants :</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python"># début du namespace global du programme
+...</code></pre>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">def f():
+  # début du namespace local à f
+  ...</code></pre>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">  def g():
+    # début du namespace local à g
+    ...
+    # fin du namespace local à g</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">  # suite du namespace local à f
+  ...
+  # fin du namespace local à f</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python"># suite du namespace global du programme
+...</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_portée"><a class="anchor" href="#_portée"></a>4. Portée</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La portée d’un identifiant est la région dans laquelle il est accessible (directement, sans préfixage).
+La portée est une notion dynamique, qui évolue en cours d&#8217;exécution.
+Exemple :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">x=1
+y=1
+z=1
+def f():
+  def g():
+    z=3
+    print(x,y,z)
+  y=2
+  print(x,y,z)
+  g()
+print(x,y,z)
+f()
+print(x,y,z)</code></pre>
+</div>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 1</div>
+<div class="paragraph">
+<p>Exécuter l&#8217;exemple précédent et interpréter les résultats.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Il est recommandé de restreindre la portée des identifiants.
+Cela signifie par exemple utiliser plutôt des variables locales que des variables globales.
+Il est en effet plus facile de débugger un programme sans variable globale :
+rechercher l&#8217;origine d&#8217;une valeur erronée est plus facile si la portée des variables est limitée.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modules"><a class="anchor" href="#_modules"></a>5. Modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un module est un moyen de limiter la portée d&#8217;identifiants.
+Un module est un namespace pouvant contenir des variables, des fonctions, etc.
+Les identifiants qu&#8217;il contient sont <em>encapsulés</em> :
+ils ne risquent donc pas de collisionner avec d&#8217;autres identifiants hors du module.
+C&#8217;est l&#8217;objectif : éviter les collisions de noms en limitant leur portée.</p>
+</div>
+<div class="paragraph">
+<p>Concrétement, un module est un fichier source <code>.py</code> :
+un fichier <code>mon_module.py</code> définit un module <code>mon_module</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier mon_module.py</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python"># Ceci est un module nommé mon_module
+
+ma_variable = 3.14 <i class="conum" data-value="1"></i><b>(1)</b>
+
+def ma_fonction():
+  return ma_variable</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>ma_variable</code> est une variable globale au module, mais interne au module
+sans collision possible avec une autre variable <code>ma_variable</code> ailleurs.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Un module est destiné à être importé dans un programme ou dans un autre module.
+L&#8217;instruction <code>import</code> exécute les instructions d&#8217;un module.
+Les identifiants du module deviennent accessibles à celui qui l&#8217;importe, à condition de les préfixer :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier mon_prog.py</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import mon_module        # charge mon_module.py
+
+print(ma_variable) # erreur !
+print(mon_module.ma_variable)
+
+ma_variable = 1
+print(ma_variable)
+print(mon_module.ma_variable)
+
+print(mon_module.ma_fonction())
+
+mon_module.ma_variable = 5
+print(mon_module.ma_fonction())</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour introduire dans le namespace courant un ou plusieurs identifiants de module, on utilise <code>from&#8230;&#8203;import</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from mon_module import ma_fonction
+
+print(ma_fonction())</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>On peut aussi importer tous les identifiants du module avec :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">from le_module import *</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>mais cette pratique n&#8217;est pas recommandée
+(car ça ne sert à rien de faire des modules pour en arriver là).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title">Exercice 2</div>
+<div class="paragraph">
+<div class="title">Question 1</div>
+<p>Ajouter des instructions globales dans le module, et déterminer à quel moment elles sont exécutées.
+Que se passe-t-il si l&#8217;on importe plusieurs fois le même module ?</p>
+</div>
+<div class="paragraph">
+<div class="title">Question 2</div>
+<p>Ajouter l&#8217;écriture de la variable <code>__name__</code> dans le module,
+et même chose dans le fichier principal.
+Exécuter le programme. Conclusion ?</p>
+</div>
+<div class="paragraph">
+<div class="title">Question 3</div>
+<p>Pourquoi les modules python ont généralement leurs instructions globales
+dans un test <code>if __name__=="__main__":</code> ?</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_recherche_de_modules"><a class="anchor" href="#_recherche_de_modules"></a>5.1. Recherche de modules</h3>
+<div class="paragraph">
+<p>La variable <code>sys.path</code> contient une liste de répertoires.
+Lors d&#8217;un <code>import</code>, le module importé est recherché successivement dans les répertoires
+mentionnés dans cette liste, jusqu&#8217;à le trouver.
+Généralement, cette liste commence par une chaine vide, c&#8217;est pourquoi les modules
+sont d&#8217;abord recherchés dans le répertoire courant.
+Tout programme a la possibilité de modifier la valeur de <code>sys.path</code>.</p>
+</div>
+<div class="paragraph">
+<p>Mais si l&#8217;on veut un programme portable, il y a mieux que modifier <code>sys.path</code>.
+En effet, les chemins par exemple sous Unix et Windows ne s&#8217;écrivent pas pareil (<code>/</code> pour l&#8217;un, <code>\</code> pour l&#8217;autre).
+De même, est-ce une bonne idée d&#8217;imposer à l&#8217;utilisateur l&#8217;endroit où il doit mettre ses modules ?</p>
+</div>
+<div class="paragraph">
+<p>Pour laisser la liberté à l&#8217;utilisateur de s&#8217;organiser comme il le souhaite,
+et pour ne pas dépendre du système qu&#8217;il utilise,
+le mieux est de ne rien fixer dans le programme.
+Et pour cela, la variable système <code>PYTHONPATH</code> va être utile.</p>
+</div>
+<div class="paragraph">
+<p>S&#8217;il existe une variable système <code>PYTHONPATH</code> (même syntaxe que la variable système <code>PATH</code>),
+alors python l&#8217;utilise pour initialiser <code>sys.path</code>.
+Plus précisément, <code>sys.path</code> est initialisée de la façon suivante :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>le répertoire contenant le script courant</p>
+</li>
+<li>
+<p>les chemins de <code>$PYTHONPATH</code></p>
+</li>
+<li>
+<p>les chemins spécifiques à la machine (dépendant des installations réalisées)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Pour rendre persistante <code>PYTHONPATH</code> d&#8217;une session à l&#8217;autre,
+il suffit de mettre dans son <code>.bashrc</code> quelque chose comme :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">EXPORT PYTHONPATH=$HOME/mes_modules_finis:$HOME/mes_modules_tests</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gérer_les_modules"><a class="anchor" href="#_gérer_les_modules"></a>5.2. Gérer les modules</h3>
+<div class="paragraph">
+<p>Il arrive fréquemment d&#8217;avoir besoin d&#8217;utiliser des modules python tiers,
+c&#8217;est-à-dire ne faisant pas partie de la distribution officielle.
+Il peut arriver également de vouloir utiliser un module dans une version différente
+ de celle de la distribution officielle.
+Conséquence : il n&#8217;est donc pas toujours possible, sur une machine donnée,
+avec une installation unique de python,
+de couvrir tous les besoins de tous les projets.</p>
+</div>
+<div class="paragraph">
+<p>Une solution à ce problème consiste, pour un projet,
+à utiliser un environnement virtuel.
+Un environnement virtuel est une arborescence situé un répertoire personnel
+du développeur,
+contenant des modules, et potentiellement un interpéteur python
+d&#8217;une version différente de celle installée sur le système.
+Un développeur peut se créer autant d&#8217;environnements virtuels qu&#8217;il le souhaite,
+et surtout, c&#8217;est lui qui le crée et le gère,
+sans avoir besoin de privilèges particuliers.</p>
+</div>
+<div class="sect3">
+<h4 id="_créer_un_environnement_virtuel"><a class="anchor" href="#_créer_un_environnement_virtuel"></a>5.2.1. Créer un environnement virtuel</h4>
+<div class="paragraph">
+<p>Choisir un nouveau répertoire pour cet environnement, par exemple <code>~/.venv</code>,
+et faire :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ python3 -m venv ~/.venv</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cela crée une arborescence sous <code>~/.venv</code> (faire <code>du -a ~/.venv</code> pour le parcourir)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_activer_lenvironnement_virtuel"><a class="anchor" href="#_activer_lenvironnement_virtuel"></a>5.2.2. Activer l&#8217;environnement virtuel</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ source ~/.venv/bin/activate</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cela modifie en particulier la variable système <code>PATH</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_installer_un_module"><a class="anchor" href="#_installer_un_module"></a>5.2.3. Installer un module</h4>
+<div class="paragraph">
+<p>Lorsque l&#8217;environnement est actif, l&#8217;installation d&#8217;un module python
+se fait dans cet environnement :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ pip install un_module</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_lister_les_modules"><a class="anchor" href="#_lister_les_modules"></a>5.2.4. Lister les modules</h4>
+<div class="paragraph">
+<p>Pour lister tous les modules installés dans l&#8217;environnement :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ pip list</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_utiliser_les_modules_de_lenvironnement"><a class="anchor" href="#_utiliser_les_modules_de_lenvironnement"></a>5.2.5. Utiliser les modules de l&#8217;environnement</h4>
+<div class="paragraph">
+<p>Pour cela, il suffit d&#8217;exécuter le programme
+lorsque l&#8217;environnement est actif.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_package_python"><a class="anchor" href="#_package_python"></a>5.3. Package Python</h3>
+<div class="paragraph">
+<p>Lorsqu&#8217;un module devient volumineux, on peut le décomposer en plusieurs fichiers sources.
+Pour cela :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>on crée un répertoire portant le nom du module</p>
+</li>
+<li>
+<p>on crée dans ce répertoire des fichiers sources qui s&#8217;importent les uns les autres.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>L&#8217;un de ces fichiers doit s&#8217;appeller <code>__init__.py</code> : c&#8217;est le <em>point d&#8217;entrée</em>.
+Importer le package se fait exactement de la même façon qu&#8217;importer un module.
+Et cela importe le fichier <code>__init__.py</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">Jacquelin Charbonnel
+  &nbsp; &mdash; &nbsp; Antora Use Case
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

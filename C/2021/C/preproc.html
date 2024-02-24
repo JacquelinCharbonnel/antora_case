@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Le préprocesseur :: Antora Use Case</title>
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/extra.css">
+<link rel="stylesheet" href="../../../_/css/lastmodify.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Antora Use Case</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="C" data-version="2021">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="base.html">Programmation en C</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Le langage C</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="base.html">Les bases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fonctions.html">Fonctions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tableaux.html">Tableaux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pointeurs.html">Pointeurs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="strings.html">Chaînes de caractères</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mainfunc.html">Fonction main</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bibliotheque.html">Organisation du code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fichiers.html">Fichiers de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="alloc.html">Allocation de mémoire</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="types.html">Complément sur les types</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="preproc.html">Le préprocesseur</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Programmation en C</span>
+    <span class="version">2021</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Génie logiciel</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../genie_logiciel/2022/index.html">2022</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Le serveur Apache</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../apache/2022/index.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../../apache/2021/index.html">2021</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Making Of</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../makingof/Fr/index.html">Fr</a>
+        </li>
+        <li class="version">
+          <a href="../../../makingof/En/index.html">En</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Master Data Science</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../master/main_public.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Programmation en C</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../2022/C/base.html">2022</a>
+        </li>
+        <li class="version is-current">
+          <a href="base.html">2021</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Python objet</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../python_objet/2022/index.html">2022</a>
+        </li>
+        <li class="version">
+          <a href="../../../python_objet/2021/index.html">2021</a>
+        </li>
+        <li class="version">
+          <a href="../../../python_objet/2020/index.html">2020</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../master/main_public.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="base.html">Programmation en C</a></li>
+    <li>Le langage C</li>
+    <li><a href="preproc.html">Le préprocesseur</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2021</button>
+  <div class="version-menu">
+    <a class="version" href="../../2022/C/preproc.html">2022</a>
+    <a class="version is-current" href="preproc.html">2021</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/antora_case/C/starts/last/modules/C/pages/preproc.adoc">Edit this Page</a></div>
+</div>
+<div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Le préprocesseur</h1>
+<div class="sect1">
+<h2 id="_fonctionnement"><a class="anchor" href="#_fonctionnement"></a>1. Fonctionnement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title"><a href="" title="cpp_define">Exercice xx1</a></div>
+<div class="paragraph">
+<div class="title">Question xx1.1</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="paragraph">
+<div class="title">Question xx1.2</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="paragraph">
+<div class="title">Question xx1.3</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_la_macro_assert"><a class="anchor" href="#_la_macro_assert"></a>2. La macro assert</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="sidebarblock exercice">
+<div class="content">
+<div class="title"><a href="" title="cpp_define">Exercice xx2</a></div>
+<div class="paragraph">
+<div class="title">Question xx2.1</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="paragraph">
+<div class="title">Question xx2.2</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="paragraph">
+<div class="title">Question xx2.3</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_définir_une_macro_à_la_compilation"><a class="anchor" href="#_définir_une_macro_à_la_compilation"></a>3. Définir une macro à la compilation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ cc -DLINUX ...
+$ cc -DF=0 ...</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">Jacquelin Charbonnel
+  &nbsp; &mdash; &nbsp; Antora Use Case
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
