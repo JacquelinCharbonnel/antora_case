@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: Antora Use Case</title>
     <link rel="canonical" href="https://jacquelincharbonnel.github.io/antora_case/python_objet/2022/iter/exo/SerieGeometrique/solution/q2/support.html">
-    <meta name="generator" content="Antora 3.1.7">
+    <meta name="generator" content="Antora 3.1.14">
     <link rel="stylesheet" href="../../../../../../../_/css/site.css">
-<link rel="stylesheet" href="../../../../../../../_/css/extra.css">
-<link rel="stylesheet" href="../../../../../../../_/css/lastmodify.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../../../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../../../../../_/css/content.css">
 
   </head>
   <body class="article">
@@ -16,16 +17,20 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://jacquelincharbonnel.github.io/antora_case">Antora Use Case</a>
+  <!-- suppression du burger du bandeau
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
+-->      
     </div>
+<!-- suppression des boutons du bandeau
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
       </div>
     </div>
+-->
   </nav>
 </header>
 <div class="body">
@@ -34,6 +39,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../../../../../index.html">Python objet</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -68,17 +74,17 @@
   </div>
   <ul class="components">
     <li class="component">
-      <span class="title">Génie logiciel</span>
+      <div class="title"><a href="../../../../../../../genie_logiciel/2022/index.html">Génie logiciel</a></div>
       <ul class="versions">
-        <li class="version">
+        <li class="version is-latest">
           <a href="../../../../../../../genie_logiciel/2022/index.html">2022</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <span class="title">Le serveur Apache</span>
+      <div class="title"><a href="../../../../../../../apache/2022/index.html">Le serveur Apache</a></div>
       <ul class="versions">
-        <li class="version">
+        <li class="version is-latest">
           <a href="../../../../../../../apache/2022/index.html">2022</a>
         </li>
         <li class="version">
@@ -87,9 +93,9 @@
       </ul>
     </li>
     <li class="component">
-      <span class="title">Making Of</span>
+      <div class="title"><a href="../../../../../../../makingof/Fr/index.html">Making Of</a></div>
       <ul class="versions">
-        <li class="version">
+        <li class="version is-latest">
           <a href="../../../../../../../makingof/Fr/index.html">Fr</a>
         </li>
         <li class="version">
@@ -98,17 +104,12 @@
       </ul>
     </li>
     <li class="component">
-      <span class="title">Master Data Science</span>
-      <ul class="versions">
-        <li class="version">
-          <a href="../../../../../../../master/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../../../../../../master/index.html">Master Data Science</a></div>
     </li>
     <li class="component">
-      <span class="title">Programmation en C</span>
+      <div class="title"><a href="../../../../../../../C/2022/C/base.html">Programmation en C</a></div>
       <ul class="versions">
-        <li class="version">
+        <li class="version is-latest">
           <a href="../../../../../../../C/2022/C/base.html">2022</a>
         </li>
         <li class="version">
@@ -117,9 +118,9 @@
       </ul>
     </li>
     <li class="component is-current">
-      <span class="title">Python objet</span>
+      <div class="title"><a href="../../../../../../2022/index.html">Python objet</a></div>
       <ul class="versions">
-        <li class="version">
+        <li class="version is-latest">
           <a href="../../../../../../2022/index.html">2022</a>
         </li>
         <li class="version">
@@ -149,25 +150,31 @@
     <a class="version is-current" href="support.html">2020</a>
   </div>
 </div>
+<!-- supression de "edit this page"
   <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/antora_case/python_objet/starts/last-1/modules/iter/pages/exo/SerieGeometrique/solution/q2/support.adoc">Edit this Page</a></div>
+-->
 </div>
-<div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
   <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
 <article class="doc">
 
 </article>
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
   </div>
 </main>
 </div>
 <footer class="footer">
   <p class="center">
-  <a href="https://jacquelincharbonnel.github.io/home/index.html">Jacquelin Charbonnel</a>
-  <!-- &nbsp; &mdash; &nbsp; -->
-  &nbsp; &nbsp;
-  &copy; Creative Commons BY-NC-SA 4.0
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
   </p>
 </footer>
 
@@ -181,7 +188,7 @@ myNewDate = new Intl.DateTimeFormat(
 document.getElementById("lastmodify").innerHTML = myNewDate ;
 </script>
 
-<script src="../../../../../../../_/js/site.js"></script>
+<script id="site-script" src="../../../../../../../_/js/site.js" data-ui-root-path="../../../../../../../_"></script>
 <script async src="../../../../../../../_/js/vendor/highlight.js"></script>
   </body>
 </html>
